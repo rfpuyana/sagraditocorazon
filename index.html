@@ -4,9 +4,9 @@
    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
 
    <body>
-     <a-scene>
-
-   <a-assets>
+   <a-scene>
+   <!-- ASSETS ASSETS ASSETS -->
+    <a-assets>
      <img
           id = "skyTexture"
           src = "https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg"
@@ -15,62 +15,15 @@
           id="pupo"
           src="../sagraditocorazon/assets/pupo.glb">
       </a-asset-item>
-
-
-
    </a-assets>
 
    <!-- <a-entity environment = "preset:forest" dressingAmount: 500></a-entity> -->
    <a-entity gltf-model="#pupo" modify-materials></a-entity>
    <!--  Hack pa que el keyboard sirva en VR-->
-    <a-entity camera
-             keyboard-controls="enabled: false">
-   </a-entity>
-
-
-<!--
-       <a-box
-              src = "#boxTexture" position = "0 2 -2" color="white" rotation = "0 30 -10" scale = "1"
-              animation = "
-                 property: object3D.position.y;
-                 to:2.2;
-                 dir:alternate;
-                 dur:2000;
-                 loop:true;
-              "
-              animation__leave = "
-                 property: object3D.rotation.z;
-                 to:10;
-                 dir: alternate;
-                 dur: 1000;
-                 loop:true;
-                 easing: easeOutElastic;
-                 startEvents: mouseenter;
-             "
-               animation__over = "
-                 property: object3D.rotation.z;
-                 to:360;
-                 dur: 1000;
-                 loop:true;
-                 startEvents: mouseleave;
-             "
-
-       >
-         <a-sphere scale = ".5 .5 .9" color = "yellow"></a-sphere>
-       </a-box>
-
-       <!-- <a-plane src = "#groundTexture" width = '30' height ='30' rotation = " -90 0 0" repeat = '1'></a-plane> -->
-       <a-sky src ="#skyTexture"></a-sky>
-       <a-light type = 'point' intensity = '2' position = '2 4 4'></a-light>
-       ltiplayer n a-
- -->
-<!--
-       <a-camera>
-         <a-cursor color = gray>
-
-         </a-cursor>
-       </a-camera> -->
-     </a-scene>
+   <a-entity camera keyboard-controls="enabled: false"></a-entity>
+   <a-sky src ="#skyTexture"></a-sky>
+   <a-light type = 'point' intensity = '2' position = '2 4 4'></a-light>
+   </a-scene>
    </body>
  </head>
 </html>
